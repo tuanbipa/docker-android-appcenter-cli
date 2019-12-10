@@ -41,10 +41,10 @@ RUN ./gradlew clean assembleDebug
 
 # Upload a build to distribute via appcenter
 FROM build as publish
-ENV APPCENTER_ACCESS_TOKEN="e7fe0279faa1e9cc26b4cf5765aecccc7ad530d5"
-ENV APK_FOLDER="/src/app/build/outputs/apk/staging/debug/"
-ENV OWNERNAME="tuan.pham"
-ENV APPNAME="HOP-Staging"
+ENV APK_FOLDER="/src/app/build/outputs/apk/debug/"
+ENV APPCENTER_ACCESS_TOKEN=""
+ENV OWNERNAME=""
+ENV APPNAME=""
 ENV RELEASENOTES=""
 WORKDIR /src
 RUN echo "Finding build artifacts" && \
